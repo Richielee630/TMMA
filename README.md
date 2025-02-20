@@ -17,10 +17,7 @@ SAMA/
 │── hls/                   # Accelerator source code (Vivado HLS)
 │── models/                # Transformer model benchmarks
 │── reference/             # Reference Paper
-│── experiments/           # Performance comparison scripts
-│── docs/                  # Documentation and reports
-│── hardware/              # FPGA configurations and deployment scripts
-│── results/               # Benchmarking results and comparisons
+│── pynq/                  # Pynq layer ipynb (run on kv260)
 │── README.md              # This file
 │── LICENSE                # License information
 ```
