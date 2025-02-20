@@ -6,7 +6,7 @@ SAMA (**S**ystolic **A**rray **M**atrix **A**ccelerator) is an FPGA-based accele
 By leveraging **efficient dataflow, pipelining, and fixed-point arithmetic**, SAMA provides a **balanced trade-off between resource utilization, latency, and throughput**, making it a compelling alternative to CPU and GPU-based inference.
 
 ## Key Features
-- **Optimized for Transformer Workloads**: Directly accelerates matrix multiplications (e.g., QKᵀ and SV) within attention mechanisms.
+- **Optimized for Transformer Workloads**: Directly accelerates matrix multiplications (e.g., Q, K, V, Output Projections) within attention mechanisms.
 - **Edge-Friendly Deployment**: Designed for resource-constrained FPGAs like Xilinx KV260, unlike prior work targeting high-end FPGA platforms.
 - **Efficient Memory Utilization**: Minimizes external DRAM access by **maximizing on-chip BRAM usage** through **tiling and data reuse**.
 - **Vivado HLS-Based Implementation**: Developed using **high-level synthesis (HLS)** for ease of development and optimization.
@@ -14,12 +14,10 @@ By leveraging **efficient dataflow, pipelining, and fixed-point arithmetic**, SA
 ## Project Structure
 ```
 SAMA/
-│── src/                   # Accelerator source code (Vivado HLS)
+│── hls/                   # Accelerator source code (Vivado HLS)
 │── models/                # Transformer model benchmarks
-│── experiments/           # Performance comparison scripts
-│── docs/                  # Documentation and reports
-│── hardware/              # FPGA configurations and deployment scripts
-│── results/               # Benchmarking results and comparisons
+│── reference/             # Reference Paper
+│── pynq/                  # Pynq layer ipynb (run on kv260)
 │── README.md              # This file
 │── LICENSE                # License information
 ```
@@ -30,32 +28,15 @@ SAMA/
    git clone https://github.com/yourusername/SAMA.git
    cd SAMA
    ```
-2. Set up the Xilinx Vivado HLS environment:
-   ```sh
-   source /opt/Xilinx/Vivado/2023.1/settings64.sh
-   ```
-3. Compile the accelerator:
-   ```sh
-   cd src
-   vivado_hls -f build.tcl
-   ```
-4. Deploy to the **Xilinx KV260** (if applicable):
-   ```sh
-   ./deploy.sh
-   ```
 
 ## Benchmarking
-To compare the FPGA implementation against CPU and GPU baselines:
-```sh
-python experiments/benchmark.py --model distilbert
-```
-Results will be saved in `results/`.
+
 
 ## Roadmap
 - [x] Systolic Array Design for Matrix Multiplication
-- [ ] Vivado HLS Implementation
+- [x] Vivado HLS Implementation
+- [x] FPGA Deployment on Xilinx KV260
 - [ ] Memory Optimization for Edge Deployment
-- [ ] FPGA Deployment on Xilinx KV260
 - [ ] Further Model Compatibility (e.g., GPT-based LLMs)
 
 ## Contributors
@@ -64,6 +45,8 @@ Results will be saved in `results/`.
 
 ## References
 - Ashish Vaswani et al., *Attention Is All You Need* (NeurIPS 2017)
+- Sanh, Victor, et al. DistilBERT, a distilled version of BERT: Smaller, faster, cheaper and lighter (2019).
+- S. Lu et al., *Hardware Accelerator for Transformer* (IEEE SOCC 2020), [DOI:10.1109/SOCC49529.2020.9524802](https://ieeexplore.ieee.org/document/9524802)
 - Xilinx, *Vitis AI Documentation* (2023)
 - Shulin Zeng et al., *FlightLLM: FPGA-Based LLM Acceleration* (FPGA '24)
 
