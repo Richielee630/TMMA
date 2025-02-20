@@ -14,8 +14,9 @@ By leveraging **efficient dataflow, pipelining, and fixed-point arithmetic**, SA
 ## Project Structure
 ```
 SAMA/
-│── src/                   # Accelerator source code (Vivado HLS)
+│── hls/                   # Accelerator source code (Vivado HLS)
 │── models/                # Transformer model benchmarks
+│── reference/             # Reference Paper
 │── experiments/           # Performance comparison scripts
 │── docs/                  # Documentation and reports
 │── hardware/              # FPGA configurations and deployment scripts
@@ -53,9 +54,9 @@ Results will be saved in `results/`.
 
 ## Roadmap
 - [x] Systolic Array Design for Matrix Multiplication
-- [ ] Vivado HLS Implementation
-- [ ] Memory Optimization for Edge Deployment
-- [ ] FPGA Deployment on Xilinx KV260
+- [x] Vivado HLS Implementation
+- [x] FPGA Deployment on Xilinx KV260
+- [x] Memory Optimization for Edge Deployment
 - [ ] Further Model Compatibility (e.g., GPT-based LLMs)
 
 ## Contributors
