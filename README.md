@@ -6,7 +6,7 @@ SAMA (**S**ystolic **A**rray **M**atrix **A**ccelerator) is an FPGA-based accele
 By leveraging **efficient dataflow, pipelining, and fixed-point arithmetic**, SAMA provides a **balanced trade-off between resource utilization, latency, and throughput**, making it a compelling alternative to CPU and GPU-based inference.
 
 ## Key Features
-- **Optimized for Transformer Workloads**: Directly accelerates matrix multiplications (e.g., QKᵀ and SV) within attention mechanisms.
+- **Optimized for Transformer Workloads**: Directly accelerates matrix multiplications (e.g., Q, K, V, Output Projections) within attention mechanisms.
 - **Edge-Friendly Deployment**: Designed for resource-constrained FPGAs like Xilinx KV260, unlike prior work targeting high-end FPGA platforms.
 - **Efficient Memory Utilization**: Minimizes external DRAM access by **maximizing on-chip BRAM usage** through **tiling and data reuse**.
 - **Vivado HLS-Based Implementation**: Developed using **high-level synthesis (HLS)** for ease of development and optimization.
@@ -31,26 +31,9 @@ SAMA/
    git clone https://github.com/yourusername/SAMA.git
    cd SAMA
    ```
-2. Set up the Xilinx Vivado HLS environment:
-   ```sh
-   source /opt/Xilinx/Vivado/2023.1/settings64.sh
-   ```
-3. Compile the accelerator:
-   ```sh
-   cd src
-   vivado_hls -f build.tcl
-   ```
-4. Deploy to the **Xilinx KV260** (if applicable):
-   ```sh
-   ./deploy.sh
-   ```
 
 ## Benchmarking
-To compare the FPGA implementation against CPU and GPU baselines:
-```sh
-python experiments/benchmark.py --model distilbert
-```
-Results will be saved in `results/`.
+
 
 ## Roadmap
 - [x] Systolic Array Design for Matrix Multiplication
