@@ -1,0 +1,3 @@
+[submodule "hls/MatMul_SA"]
+	path = hls/MatMul_SA
+	url = https://github.com/Richielee630/MatMul_SA.git
