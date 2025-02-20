@@ -45,6 +45,8 @@ SAMA/
 
 ## References
 - Ashish Vaswani et al., *Attention Is All You Need* (NeurIPS 2017)
+- Sanh, Victor, et al. DistilBERT, a distilled version of BERT: Smaller, faster, cheaper and lighter (2019).
+- S. Lu et al., *Hardware Accelerator for Transformer* (IEEE SOCC 2020), [DOI:10.1109/SOCC49529.2020.9524802](https://ieeexplore.ieee.org/document/9524802)
 - Xilinx, *Vitis AI Documentation* (2023)
 - Shulin Zeng et al., *FlightLLM: FPGA-Based LLM Acceleration* (FPGA '24)
 
