@@ -15,6 +15,7 @@ By leveraging **efficient dataflow, pipelining, and fixed-point arithmetic**, SA
 ```
 SAMA/
 │── hls/                   # Accelerator source code (Vivado HLS)
+|── vivado/                # vivado design snapshot
 │── models/                # Transformer model benchmarks
 │── reference/             # Reference Paper
 │── pynq/                  # Pynq layer ipynb (run on kv260)
