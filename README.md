@@ -36,7 +36,7 @@ SAMA/
 - [x] Systolic Array Design for Matrix Multiplication
 - [x] Vivado HLS Implementation
 - [x] FPGA Deployment on Xilinx KV260
-- [ ] Memory Optimization for Edge Deployment
+- [x] Memory Optimization for Edge Deployment
 - [ ] Further Model Compatibility (e.g., GPT-based LLMs)
 
 ## Contributors
