@@ -2,6 +2,11 @@
 
 ## Optimized for Edge Deployment on Xilinx KV260
 
+## 🔬 Ongoing Research & Work in Progress
+This project is an active research effort, and the implementation is currently under development. We plan to open-source the full code once our research paper is published. Some components may be incomplete or restricted for now.
+
+If you're interested in this project, feel free to watch this repository for updates or reach out for discussions. 🚀
+
 ### Overview
 TMMA is an FPGA-based accelerator designed to efficiently execute dense matrix multiplication operations, with a primary focus on accelerating the self-attention projection computations in Transformer-based Large Language Models (LLMs). Although our initial goal was to accelerate full DistilBERT inference, development timeline and resource constraints led us to concentrate on optimizing the projection computations (i.e., the matrix multiplications underlying the Q, K, and V projections) in the Multi-Head Self-Attention (MHA) module.
 
@@ -34,18 +39,28 @@ cd TMMA
 1. Follow the instructions in the `hls/` directory to build the accelerator using Vivado HLS.
 2. For FPGA deployment, refer to the example notebooks in the `pynq/` directory.
 
+⚠️ Note: Some parts of this repository (e.g., MatMul_SA submodule) are not yet available due to ongoing research. The complete source code will be published after our paper is released.
+
 ## Benchmarking
 Detailed benchmarking scripts and performance evaluations are provided in the `models/` and `pynq/` directories. Our benchmarks include:
 - **Standalone GEMM**: Performance evaluation on random matrices.
 - **DistilBERT Attention Throughput**: Inference performance when offloading self-attention projection computations to the FPGA.
 
 ## Roadmap
-- [x] Systolic Array Design for Matrix Multiplication
-- [x] Vivado HLS Implementation
-- [x] FPGA Deployment on Xilinx KV260
-- [x] Memory Optimization for Edge Deployment
-- [ ] Extending Acceleration to Additional Transformer Components (e.g., Softmax, FFN)
-- [ ] Expanding Model Compatibility (e.g., GPT-based LLMs)
+
+### ✅ Completed:
+- Systolic Array Design for Matrix Multiplication
+- Vivado HLS Implementation
+- FPGA Deployment on Xilinx KV260
+- Memory Optimization for Edge Deployment
+
+### 🚧 In Progress (Ongoing Research):
+- Extending Acceleration to Additional Transformer Components (e.g., Softmax, FFN)
+- Expanding Model Compatibility (e.g., GPT-based LLMs)
+- Optimizing for Larger Batch Sizes
+
+### 📢 Planned Release: 
+The full code will be made available after publication.
 
 ## Contributors
 - **Richie Li** ([zhaoqil3@uci.edu](mailto:zhaoqil3@uci.edu)) – FPGA Design & Implementation
@@ -61,3 +76,5 @@ Detailed benchmarking scripts and performance evaluations are provided in the `m
 
 ## License
 This project is licensed under the MIT License.
+
+**Temporary Access Restriction:** Parts of this project are currently unavailable as it is part of an ongoing research effort. Full open-source release will follow the paper publication.
