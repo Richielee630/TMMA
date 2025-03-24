@@ -39,8 +39,6 @@ cd TMMA
 1. Follow the instructions in the `hls/` directory to build the accelerator using Vivado HLS.
 2. For FPGA deployment, refer to the example notebooks in the `pynq/` directory.
 
-⚠️ Note: Some parts of this repository (e.g., MatMul_SA submodule) are not yet available due to ongoing research. The complete source code will be published after our paper is released.
-
 ## Benchmarking
 Detailed benchmarking scripts and performance evaluations are provided in the `models/` and `pynq/` directories. Our benchmarks include:
 - **Standalone GEMM**: Performance evaluation on random matrices.
