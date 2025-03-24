@@ -59,14 +59,11 @@ Detailed benchmarking scripts and performance evaluations are provided in the `m
 - Expanding Model Compatibility (e.g., GPT-based LLMs)
 - Optimizing for Larger Batch Sizes
 
-### 📢 Planned Release: 
-The full code will be made available after publication.
-
-## Contributors
-- **Richie Li** ([zhaoqil3@uci.edu](mailto:zhaoqil3@uci.edu)) – FPGA Design & Implementation
-- **Sicheng Chen** ([sichenc5@uci.edu](mailto:sichenc5@uci.edu)) – Model Benchmarking & Validation
+### 📢 Release
+- Code published and tagged as v1.0.0
 
 ## References
+- **arXiv Paper:** [https://arxiv.org/abs/2503.16731](https://arxiv.org/abs/2503.16731)
 - Ashish Vaswani et al., "Attention Is All You Need" (NeurIPS 2017)
 - Victor Sanh et al., "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter" (2019)
 - S. Lu et al., "Hardware Accelerator for Transformer" (IEEE SOCC 2020) [DOI:10.1109/SOCC49529.2020.9524802](https://ieeexplore.ieee.org/document/9524802)
@@ -74,7 +71,8 @@ The full code will be made available after publication.
 - Shulin Zeng et al., "FlightLLM: FPGA-Based LLM Acceleration" (FPGA '24)
 - Jinming Zhuang et al., "SSR: Spatial Sequential Hybrid Architecture for Latency Throughput Tradeoff in Transformer Acceleration" (FPGA '24)
 
+## Note
+This repository does not include compiled bitstreams or full Vivado projects. Users should recreate the hardware platform using the provided HLS code and integration diagrams. Ensure appropriate licenses for any Xilinx IP cores used in your design.
+
 ## License
 This project is licensed under the MIT License.
-
-**Temporary Access Restriction:** Parts of this project are currently unavailable as it is part of an ongoing research effort. Full open-source release will follow the paper publication.

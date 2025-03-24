@@ -1,0 +1,24 @@
+cff-version: "1.2.0"
+message: "If you use TMMA, please cite it using the following metadata."
+title: "TMMA: A Tiled Matrix Multiplication Accelerator for Self-Attention Projections in Transformer Models"
+version: "1.0.0"
+doi: ""
+url: "https://github.com/yourusername/TMMA"
+date-released: 2025-03-23
+authors:
+  - family-names: "Li"
+    given-names: "Richie"
+    affiliation: "University of California, Irvine"
+  - family-names: "Chen"
+    given-names: "Sicheng"
+    affiliation: "University of California, Irvine"
+references:
+  - type: "preprint"
+    title: "TMMA: A Tiled Matrix Multiplication Accelerator for Self-Attention Projections in Transformer Models"
+    authors:
+      - family-names: "Li"
+        given-names: "Richie"
+      - family-names: "Chen"
+        given-names: "Sicheng"
+    date: "2025-03-23"
+    url: "https://arxiv.org/abs/2503.16731"
