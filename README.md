@@ -74,3 +74,12 @@ This repository does not include compiled bitstreams or full Vivado projects. Us
 
 ## License
 This project is licensed under the MIT License.
+## Star History
+
+<a href="https://www.star-history.com/?repos=Richielee630%2FTMMA&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Richielee630/TMMA&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Richielee630/TMMA&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Richielee630/TMMA&type=date&legend=top-left" />
+ </picture>
+</a>
